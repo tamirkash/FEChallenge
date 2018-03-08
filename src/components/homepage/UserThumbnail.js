@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Thumbnail from "./Thumbnail";
+import ThumbnailView from "./ThumbnailView";
 
 export default class UserThumbnail extends Component {
     constructor(props){
@@ -38,7 +38,7 @@ export default class UserThumbnail extends Component {
     render() {
         return (
             this.props.thumbnail.thumbnailReceived ?
-                <Thumbnail handleStop={this.handleStop} {...this.props.thumbnail}/>
+                <ThumbnailView handleStop={this.handleStop} {...this.props.thumbnail}/>
                     :
                 <h2>Loading...</h2>
         )

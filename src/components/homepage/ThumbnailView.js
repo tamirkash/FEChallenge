@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Draggable from "react-draggable";
 
-export default class Thumbnail extends Component {
+export default class ThumbnailView extends Component {
     render() {
         return (
             <Draggable

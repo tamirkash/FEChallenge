@@ -8,8 +8,9 @@
     border-radius: 10px;
 }
 
-.nav li {
+.nav {
     line-height: 50px;
+    display: inline-block;
 }
 
 .homepage-welcome {

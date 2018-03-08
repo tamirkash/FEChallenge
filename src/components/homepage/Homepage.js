@@ -10,7 +10,7 @@ class Homepage extends React.Component{
             <div>
                 <Navigation onLogout={this.props.onLogout}/>
                 <div className="container">
-                    <Welcome text="Welcome!"/>
+                    <Welcome text={"Welcome " + this.props.username}/>
                     <UserThumbnailContainer />
                 </div>
             </div>

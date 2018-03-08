@@ -7,7 +7,10 @@ export const login = ({username, password}) => {
     localStorage.setItem(USER, username);
 
     return {
-        type: LOGIN_SUCCESSFUL
+        type: LOGIN_SUCCESSFUL,
+        payload: {
+            username
+        }
     }
 }
 

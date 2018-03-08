@@ -5,9 +5,9 @@ export default class Navigation extends Component {
     render() {
         return (
             <Navbar>
-                <ul className="nav navbar-right">
-                    <li><Button onClick={this.props.onLogout}>Logout</Button></li>
-                </ul>
+                <div className="nav navbar-right">
+                    <Button onClick={this.props.onLogout}>Logout</Button>
+                </div>
             </Navbar>
         )
     }
