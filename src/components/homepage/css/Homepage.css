@@ -1,0 +1,17 @@
+.homepage-image {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 153px;
+    width: 198px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.nav li {
+    line-height: 50px;
+}
+
+.homepage-welcome {
+    margin-bottom: 50px;
+}

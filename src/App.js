@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import LoginContainer from "./components/authentication/containers/LoginContainer";
+import HomepageContainer from "./components/homepage/containers/HomepageContainer";
+import {Route, BrowserRouter as Router} from "react-router-dom";
+import PrivateRouteContainer from "./components/authentication/containers/PrivateRouteContainer";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Router>
+                <div>
+                    <Route path="/login" component={LoginContainer} />
+                    <PrivateRouteContainer exact path="/" component={HomepageContainer} />
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
