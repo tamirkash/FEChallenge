@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import {Button, FormControl, FormGroup} from "react-bootstrap";
 
 export default class LoginForm extends Component {
@@ -62,3 +63,7 @@ export default class LoginForm extends Component {
         )
     }
 }
+
+LoginForm.propTypes = {
+    onLogin: PropTypes.func.isRequired
+};

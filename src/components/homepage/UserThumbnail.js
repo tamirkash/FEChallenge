@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import ThumbnailView from "./ThumbnailView";
 
 export default class UserThumbnail extends Component {
@@ -44,3 +45,9 @@ export default class UserThumbnail extends Component {
         )
     }
 }
+
+UserThumbnail.propTypes = {
+    thumbnail: PropTypes.object.isRequired,
+    getThumbnail: PropTypes.func.isRequired,
+    saveLocation: PropTypes.func.isRequired
+};

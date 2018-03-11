@@ -1,0 +1,15 @@
+.contact-container textarea{
+    resize: none;
+}
+
+.contact-container {
+    width: 50%;
+}
+
+.contact-submit-button {
+    float: right;
+}
+
+.contact-title {
+    margin-bottom: 30px;
+}

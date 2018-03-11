@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const Welcome = ({ text }) => {
     return (
-        <h1 className="homepage-welcome">{text}</h1>
+        <h2 className="homepage-welcome">{text}</h2>
     )
 }
 
 export default Welcome;
+
+Welcome.propTypes = {
+  text: PropTypes.string.isRequired
+};

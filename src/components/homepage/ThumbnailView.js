@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Draggable from "react-draggable";
+import PropTypes from "prop-types";
 
 export default class ThumbnailView extends Component {
     render() {
@@ -14,3 +15,10 @@ export default class ThumbnailView extends Component {
         )
     }
 }
+
+ThumbnailView.propTypes = {
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+    thumbnail: PropTypes.string.isRequired,
+    handleStop: PropTypes.func.isRequired
+};

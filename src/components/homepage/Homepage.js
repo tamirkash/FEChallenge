@@ -1,21 +1,29 @@
 import React from 'react';
 import './css/Homepage.css';
-import Navigation from "./Navigation";
 import Welcome from "./Welcome";
-import UserThumbnailContainer from "./containers/UserThumbnailContainer";
+import UserThumbnail from "./UserThumbnail";
+import PropTypes from "prop-types";
 
 class Homepage extends React.Component{
     render(){
         return (
-            <div>
-                <Navigation onLogout={this.props.onLogout}/>
-                <div className="container">
-                    <Welcome text={"Welcome " + this.props.username}/>
-                    <UserThumbnailContainer />
-                </div>
+            <div className="container">
+                <Welcome text={"Welcome " + this.props.username}/>
+                <UserThumbnail
+                    thumbnail={this.props.thumbnail}
+                    saveLocation={this.props.saveLocation}
+                    getThumbnail={this.props.getThumbnail}
+                />
             </div>
         )
     }
+};
+
+Homepage.propTypes = {
+    username: PropTypes.string.isRequired,
+    thumbnail: PropTypes.object.isRequired,
+    saveLocation: PropTypes.func.isRequired,
+    getThumbnail: PropTypes.func.isRequired
 };
 
 export default Homepage;

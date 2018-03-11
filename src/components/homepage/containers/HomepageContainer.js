@@ -1,16 +1,18 @@
 import { connect } from 'react-redux';
 import Homepage from "../Homepage";
-import {logout} from "../../../reducers/user/actions";
+import {getThumbnail, saveLocation} from "../../../reducers/thumbnail/actions";
 
 const mapStateToProps = state => {
     return {
-        username: state.user.username
+        username: state.user.username,
+        thumbnail: state.thumbnail
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-        onLogout: () => dispatch(logout())
+        saveLocation: (x, y) => dispatch(saveLocation(x, y)),
+        getThumbnail: () => dispatch(getThumbnail())
     }
 }
 

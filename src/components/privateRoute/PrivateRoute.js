@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Redirect, Route } from 'react-router-dom';
+import NavigationContainer from "../navigation/containers/NavigationContainer";
 
 const PrivateRoute = ({ component: Component, logged, ...rest }) => {
     return (
@@ -7,7 +9,10 @@ const PrivateRoute = ({ component: Component, logged, ...rest }) => {
             {...rest}
             render={props =>
                 logged ? (
-                    <Component {...props} />
+                    <div>
+                        <NavigationContainer location={props.location.pathname}/>
+                        <Component {...props} />
+                    </div>
                 ) : (
                     <Redirect to={{ pathname: '/login' }} />
                 )
@@ -15,5 +20,10 @@ const PrivateRoute = ({ component: Component, logged, ...rest }) => {
         />
     )
 }
+
+PrivateRoute.propTypes = {
+    logged: PropTypes.bool.isRequired,
+    location: PropTypes.object.isRequired
+};
 
 export default PrivateRoute;
